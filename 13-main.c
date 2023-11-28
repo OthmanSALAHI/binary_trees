@@ -17,6 +17,7 @@ int main(void)
     root->right = binary_tree_node(root, 402);
     binary_tree_insert_right(root->left, 54);
     binary_tree_insert_right(root, 128);
+    root->right->left = binary_tree_node(root->right, 222);
     binary_tree_print(root);
 
     nodes = binary_tree_nodes(root);
@@ -25,5 +26,9 @@ int main(void)
     printf("Nodes in %d: %lu\n", root->right->n, nodes);
     nodes = binary_tree_nodes(root->left->right);
     printf("Nodes in %d: %lu\n", root->left->right->n, nodes);
+    nodes = binary_tree_nodes(root->left);
+    printf("Nodes in %d: %lu\n", root->left->n, nodes);
+    nodes = binary_tree_nodes(root->right->left);
+    printf("Nodes in %d: %lu\n", root->right->left->n, nodes);
     return (0);
 }
