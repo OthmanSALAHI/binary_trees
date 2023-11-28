@@ -1,7 +1,16 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "binary_trees.h"
+size_t _height(const binary_tree_t *tree)
+{
+  if (tree)
+    return(0);
 
+  size_t limn = 0, lisr = 0;
+  lisr = (tree->left) ? 1 + _height(tree) : 0 ;
+  limn = (tree->right) ? 1 + _height(tree) : 0 ;
+  return((lisr > limn ? lisr : limn));
+}
 /**
  * main - Entry point
  *
