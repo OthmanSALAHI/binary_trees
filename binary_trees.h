@@ -46,6 +46,7 @@ int binary_tree_balance(const binary_tree_t *tree);
 
 
 
-
+/* added functions */
+size_t New_height(const binary_tree_t *tree);
 
 #endif
