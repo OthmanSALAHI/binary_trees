@@ -24,15 +24,13 @@ int wach_wr9a(const binary_tree_t *node)
  */
 size_t _tool(const binary_tree_t *tree)
 {
-	size_t left, right;
+	size_t lisr, limn;
 
 	if (!tree)
 		return (0);
-	left = _tool(tree->left);
-	right = _tool(tree->right);
-	if (left >= right)
-		return (1 + left);
-	return (1 + right);
+	lisr = _tool(tree->left);
+	limn = _tool(tree->right);
+	return ((lisr > limn) ? 1 + lisr : 1 + limn);
 }
 
 /**
@@ -43,19 +41,19 @@ size_t _tool(const binary_tree_t *tree)
  */
 int wach_nadia(const binary_tree_t *tree)
 {
-	binary_tree_t *l, *r;
+	binary_tree_t *lisr, *limn;
 
 	if (!tree)
 		return (1);
-	l = tree->left;
-	r = tree->right;
+	lisr = tree->left;
+	limn = tree->right;
 	if (wach_wr9a(tree))
 		return (1);
-	if (!l || !r)
+	if (!lisr || !limn)
 		return (0);
-	if (_tool(l) == _tool(r))
+	if (_tool(lisr) == _tool(limn))
 	{
-		if (wach_nadia(l) && wach_nadia(r))
+		if (wach_nadia(lisr) && wach_nadia(limn))
 			return (1);
 	}
 	return (0);
