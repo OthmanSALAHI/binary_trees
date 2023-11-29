@@ -1,5 +1,4 @@
 #!/bin/bash
-
 if [ $# -lt 2 ]; then
   echo "Usage: $0 <file> <commit_message>"
   exit 1
