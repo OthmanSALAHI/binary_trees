@@ -1,0 +1,1 @@
+gcc -Wall -Wextra -Werror -pedantic *.c -o "$1"-test
