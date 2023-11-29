@@ -13,7 +13,7 @@ const binary_tree_t *second)
 	binary_tree_t *agadir;
 	binary_tree_t *dakhla;
 
-    if (!first || !second)
+	if (!first || !second)
 		return (NULL);
 
 	if (second == first)
