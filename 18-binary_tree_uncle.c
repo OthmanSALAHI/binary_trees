@@ -9,7 +9,7 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 	binary_tree_t *father;
 	binary_tree_t *uncle ;
 
-	if (!node)
+	if (!node || !node->parent)
 		return (NULL);
 	father = node->parent;
 	uncle = binary_tree_sibling(father);
