@@ -75,7 +75,16 @@ void _tree_level(const binary_tree_t *tree, size_t level, void (*func)(int));
 int binary_tree_is_complete(const binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+int is_bst_helper(const binary_tree_t *tree, int lo, int hi);
+int binary_tree_is_bst(const binary_tree_t *tree);
+
+
+
+
+
+
+
 /* necessaire */
 void binary_tree_print(const binary_tree_t *tree);
 
-#endif
+#endif /* BINARY_TREES_H */
