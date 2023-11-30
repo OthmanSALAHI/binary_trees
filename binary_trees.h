@@ -83,8 +83,10 @@ bst_t *bst_search(const bst_t *tree, int value);
 bst_t *bst_remove(bst_t *root, int value);
 int binary_tree_is_avl(const binary_tree_t *tree);
 avl_t *avl_insert(avl_t **tree, int value);
-
-
+size_t _height_(const binary_tree_t *tree);
+int _balance_(const binary_tree_t *tree);
+avl_t *avl_insert_recursive_(avl_t **tree, avl_t *parent,
+		avl_t **new, int value);
 
 /* necessaire */
 void binary_tree_print(const binary_tree_t *tree);
